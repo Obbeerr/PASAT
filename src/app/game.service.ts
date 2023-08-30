@@ -160,7 +160,7 @@ export class GameService {
       return;
     }
     this.state.currentChunk = sequence.slice(i - nBack, i);
-    this.state.correctResult = this.state.currentChunk.reduce((a, b) => a + b);
+    this.state.correctResult = this.state.currentChunk.sum(i - nBack, i);
   }
 
   private logInputAndCorrectAnswer() {
